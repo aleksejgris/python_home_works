@@ -1,2 +1,3 @@
-print ("Вас зовут:" )
-my_last = input ("Гришин Алексей")
+my_first = input ("Алексей")
+my_last = input ("Гришин ")
+print("Вас зовут:" {last_name} {first_name})
