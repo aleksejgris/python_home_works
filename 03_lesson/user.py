@@ -4,6 +4,7 @@ class User:
         self.last_name = last_name
         self.full_name = last_name,first_name
 
+
     def get_first_name(self):
         return self.first_name
 
