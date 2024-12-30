@@ -8,5 +8,4 @@ from_address = Address("138152" , "Ленинград", "Ленина", "10" , "
 
 mailing = Mailing(30,to_address,from_address, "40")
 
-
 print(mailing)

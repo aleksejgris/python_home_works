@@ -4,3 +4,4 @@ class  Smartphone:
         self.phone_brand = phone_brand
         self.phone_model = phone_model
         self.number = number
+
