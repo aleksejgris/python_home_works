@@ -10,4 +10,3 @@ mailing = Mailing(30,to_address,from_address, "40")
 
 
 print(mailing)
-
