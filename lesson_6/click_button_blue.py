@@ -14,4 +14,4 @@ cba = driver.find_element(By.CSS_SELECTOR,"#content")
 abc = cba.find_element(By.CSS_SELECTOR,"#p.bg_success").text
 print(abc)
 
-driver.guit()
+driver.quit()
