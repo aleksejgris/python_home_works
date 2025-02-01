@@ -9,7 +9,7 @@ driver.implicitly_wait(20)
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 sleep(25)
 
-abc = driver.find_element(By.CSS_SELECTOR, "img/award.png")
+abc = driver.find_element(By.CSS_SELECTOR, 'img[scr = "img/award.png"]').text
 print(abc)
 
-driver.guit()
+driver.quit()
