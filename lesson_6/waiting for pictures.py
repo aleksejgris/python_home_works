@@ -12,4 +12,4 @@ sleep(25)
 abc = driver.find_element(By.CSS_SELECTOR, "img/award.png")
 print(abc)
 
-driver.guit()
+driver.quit()
