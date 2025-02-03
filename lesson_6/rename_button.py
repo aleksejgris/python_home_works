@@ -7,11 +7,8 @@ driver = webdriver.Chrome (service=ChromeService( ChromeDriverManager().install(
 
 driver.get("http://uitestingplayground.com/textinput")
 
-abc = driver.find_element(By.CSS_SELECTOR, "#newButtonName")
-abc.send_keys("SkyPro")
+abc = driver.find_element(By.CSS_SELECTOR, "#newButtonName").send_keys("SkyPro")
 cba = driver.find_element(By.CSS_SELECTOR, "#updatingButton").click()
-
-bca = driver.find_element(By.CSS_SELECTOR, "#updatingButton")
-print(bca.text)
+print(driver.find_element(By.CSS_SELECTOR, "#updatingButton").text)
 
 driver.quit()
