@@ -9,7 +9,7 @@ driver.maximize_window()
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 
 
-abc = driver.find_element(By.CSS_SELECTOR, 'img[scr = "img/award.png"]').text
+abc = driver.find_element(By.CSS_SELECTOR, "#award").get_attribute(scr)
 print(abc)
 
 driver.quit()
