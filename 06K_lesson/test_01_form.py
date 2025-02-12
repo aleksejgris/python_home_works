@@ -28,13 +28,13 @@ waiter = WebDriverWait(driver,40)
 
 alert_danger_color = "rgba(248,215,218,1)"
 zip_code = driver.find_element(By.CSS_SELECTOR,"#zip_code")
-color_zip = zip_code.value_of_css_property("background_color")
+color_zip = zip_code.value_of_css_property("background-color")
 assert color_zip == alert_danger_color,f"Expected {alert_danger_color}, but got{color_zip}"
 
 fields = ["first_name","last_name","address","e_mail","phone","country","job_position","company"]
 for field in fields:
     element = driver.find_element(By.ID,field)
-    color = element.value_of_css_property("background_color")
+    color = element.value_of_css_property("background-color")
     assert color == "rgba(209,231,221,1)", f"Field{field} is not highlighted in green"
 
     driver.quit()
