@@ -22,7 +22,7 @@ driver.find_element(By.XPATH,'//span[text()="="]').click()
 driver.implicitly_wait(5)
 
 WebDriverWait(driver,45).until(
-    EC.text_to_be_present_in_element(By.CSS_SELECTOR,"#screen"),'15')
+    EC.text_to_be_present_in_element(By.CSS_SELECTOR,["#screen"]),'15')
 
 result = driver.find_element(By.CSS_SELECTOR,"#screen").text
 assert int(result) == 15
