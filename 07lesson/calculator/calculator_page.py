@@ -1,14 +1,18 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 class Calculator:
 
-    def calculator_expectation(self):
-        self.browser.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
-        self.browser.maximize_window()
-        self.delay_input = browser.find_element(By.ID, "delay")
-        self.delay_input.clear()
-        self.delay_input.send_keys("45")
+     def __inint__(self,driver):
+        self.driver = driver
+        self.wait = WebDriverWait(driver, 5)
 
-    def calculator_enter(self):
+    def open(self):
+            self.driver.get(
+                "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
+            )
+
+    def enter(self):
         self.browser.find_element(By.XPATH, '//span[text()="7"]').click()
         self.browser.find_element(By.XPATH, '//span[text()="+"]').click()
         self.browser.find_element(By.XPATH, '//span[text()="8"]').click()
