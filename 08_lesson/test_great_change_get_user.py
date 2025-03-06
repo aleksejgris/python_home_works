@@ -1,3 +1,5 @@
+import requests
+
 
 def test_creat_user_worker():
 
@@ -97,5 +99,6 @@ def test_creat_user_None():
             }
 
             response = requests.request("GET", url, headers=headers)
+
 
             assert (response.text)
