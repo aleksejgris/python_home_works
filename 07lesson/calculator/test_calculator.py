@@ -1,15 +1,16 @@
+import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from test_calculator.Calculator import Calculator
+from calculator.Calculator import Calculator
 
+@pytest.fixture
+def driver():
+    driver = webdriver.Chrome()
+    driver.implicitly_wait(3)
+    driver.maximize_window()
+    yield driver
+    driver.quit()
 
-def calculator_examination():
-    browser= webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-    b = Calculator(browser)
-    b.calculator_expectation()
-    b.calculator_enter()
-    browser.quit()
+def test_calculator(driver):
+   enter_calculator = Calculator(driver):
+   enter_calculator.open()
+   enter_calculator.enter()
